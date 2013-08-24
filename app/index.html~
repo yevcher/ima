@@ -20,7 +20,7 @@
     <body ng-app="sampleYeomanAppApp">
       <script src="scripts/vendor/bsa.js"></script>
 
-      <div class="container bs-docs-section clearfix">
+      <div class="bs-docs-section clearfix">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
