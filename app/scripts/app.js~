@@ -7,14 +7,13 @@ var sampleYeomanAppApp = angular.module('sampleYeomanAppApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-
       .when('/1', {
         templateUrl: 'views/1.html',
-        controller: 'MainCtrl'
+//        controller: 'MainCtrl'
       })
-      .when('2', {
+      .when('/2', {
         templateUrl: 'views/2.html',
-        controller: 'MainCtrl'
+//        controller: 'MainCtrl'
       })
       .otherwise({
 //        redirectTo: '/'

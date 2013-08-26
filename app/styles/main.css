@@ -1,5 +1,6 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 .bs-docs-section {
- max-width: 1170px;
-
+ /* max-width: 1170px; */
+    margin-top: 0;
+ 
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-var sampleYeomanAppApp = angular.module('sampleYeomanAppApp', [])
+var ima = angular.module('ima', [])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
