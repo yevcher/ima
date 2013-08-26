@@ -1,6 +1,23 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 .bs-docs-section {
- /* max-width: 1170px; */
-    margin-top: 0;
+    margin-top: 0px;
  
+}
+
+
+.ima-brand {
+/*    float: left;  */
+/*    margin-right: 20px;  */
+    margin-bottom: 10px;
+}
+
+.ima-page-header {
+/*    display: block;  */
+}
+
+.ima-header-right {
+    float: right;
+    font-size: 4.5em;
+    margin-right: 70px;
+    margin-top: 50px;
 }
