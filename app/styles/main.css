@@ -4,20 +4,11 @@
  
 }
 
+.page-header {
+    font-size: 120%;
+/*    border-color: #591f3e;  */
+}
 
 .ima-brand {
-/*    float: left;  */
-/*    margin-right: 20px;  */
     margin-bottom: 10px;
-}
-
-.ima-page-header {
-/*    display: block;  */
-}
-
-.ima-header-right {
-    float: right;
-    font-size: 4.5em;
-    margin-right: 70px;
-    margin-top: 50px;
 }
