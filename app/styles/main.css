@@ -1,11 +1,11 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 .bs-docs-section {
-    margin-top: 0px;
+    margin-top: 0px; 
  
 }
 
 .page-header {
-    font-size: 120%;
+/*    font-size: 120%; */
 /*    border-color: #591f3e;  */
 }
 
