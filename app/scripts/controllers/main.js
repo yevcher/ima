@@ -1,21 +1,12 @@
-'use strict';
+ima.controller ('HeaderCtrl', [$scope, $location, PageTitles, function ($scope, $location, PageTitles) {
+//	$scope.curr-page-title = PageTitles[$location.path()].ima-page-title;
+    $scope.curr-page-title = 'Hi there!';
 
-ima.controller('MainCtrl', function($scope, $location) {
+}]);
 
-    $scope.ima-page-title = "Main Page. Yes!";
-    
-    
-/*	switch ($location.path()) {
-		case '/':
-			$scope.ima-page-title = "Main Page. Yes!";
-			break;
-		case '/1':
-			$scope.ima-page-title = "Page One. Yes!";
-			break;
-		case '/2':
-			$scope.ima-page-title = "Page Two. Yes!";
-			break;
-		default:
-			$scope.ima-page-title = "Just IMA Page";
-	}  */
-}
+ima.controller ('MainCtrl', function () {
+
+
+})
+
+

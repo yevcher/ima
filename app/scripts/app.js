@@ -1,7 +1,8 @@
 'use strict';
 
-var ima = angular.module('ima', [])
-  .config(['$routeProvider', function($routeProvider) {
+var ima = angular.module('ima', ['ima.services']);
+
+ima.config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

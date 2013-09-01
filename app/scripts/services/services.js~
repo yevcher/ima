@@ -1,0 +1,33 @@
+
+ima.factory("PageTitles", function () {
+	var PageTitles = {};
+	
+	PageTitles.cast = [
+		{
+			page: '/',
+			ima-page-title: 'Main Page - Yes!'
+		},
+		{
+			page: '/1',
+			ima-page-title: 'PageOne - Yes!'
+		},
+		{
+			page: '/2',
+			ima-page-title: 'PageTwo - Yes!'
+		}		
+	];
+	return PageTitles;
+})
+
+
+ima.controller ('HeaderCtrl', [$scope, $location, PageTitles, function ($scope, $location, PageTitles) {
+	$scope.pagetitles = PageTitles;
+	$scope.currpage = $location.path();
+}]);
+
+ima.controller ('MainCtrl', function () {
+
+
+})
+
+
