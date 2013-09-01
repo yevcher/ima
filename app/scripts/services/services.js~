@@ -1,33 +1,20 @@
-
-ima.factory("PageTitles", function () {
-	var PageTitles = {};
-	
-	PageTitles.cast = [
-		{
-			page: '/',
-			ima-page-title: 'Main Page - Yes!'
-		},
-		{
-			page: '/1',
-			ima-page-title: 'PageOne - Yes!'
-		},
-		{
-			page: '/2',
-			ima-page-title: 'PageTwo - Yes!'
-		}		
-	];
-	return PageTitles;
-})
+var services = angular.module('ima.services', []);
 
 
-ima.controller ('HeaderCtrl', [$scope, $location, PageTitles, function ($scope, $location, PageTitles) {
-	$scope.pagetitles = PageTitles;
-	$scope.currpage = $location.path();
-}]);
-
-ima.controller ('MainCtrl', function () {
-
-
-})
+services.factory("PageTitles", function () {
+    var PageTitles = {};
+    PageTitles['/'] = {ima-page-title: 'Main Page - Yes!'};
+    PageTitles['/1'] = {ima-page-title: 'Page One - Yes!'};
+    PageTitles['/2'] = {ima-page-title: 'Page Two - Yes!'};
+    return PageTitles;
+});
 
 
+services.factory('Page', function() {
+    var title = 'default';
+    return {
+	title: function() {return title;},
+	setTitle: function(newTitle) { title = newTitle;}
+
+    };
+});

@@ -21,3 +21,17 @@ ima.config(['$routeProvider', function($routeProvider) {
         templateUrl: '404.html',
       });
   }]);
+
+
+app.factory ('Page', function () {
+    var title = 'defualt';
+    return {
+	title: function() {return title;},
+	setTitle: function(newTitle) {title = newTitle;}
+    };
+});
+
+
+function HeaderCtrl ($scope, Page) {
+    $scope.Page = Page;
+}
