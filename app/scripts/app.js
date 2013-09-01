@@ -9,11 +9,11 @@ var ima = angular.module('ima', [])
       })
       .when('/1', {
         templateUrl: 'views/1.html',
-//        controller: 'MainCtrl'
+        controller: 'MainCtrl'
       })
       .when('/2', {
         templateUrl: 'views/2.html',
-//        controller: 'MainCtrl'
+        controller: 'MainCtrl'
       })
       .otherwise({
 //        redirectTo: '/'

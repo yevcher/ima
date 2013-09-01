@@ -10,7 +10,7 @@
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>			
-    <title ng-bind="ima-page-title"></title>
+    <title></title>
 
     <!-- Custom styles for this template -->
     <link href="styles/justified-nav.css" rel="stylesheet">
@@ -59,9 +59,7 @@
 	
 
 
-<!--    <script src="scripts/vendor/angular.js"></script>  -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="scripts/vendor/angular.js"></script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
@@ -70,3 +68,6 @@
 	
   </body>
 </html>
+
+
+
