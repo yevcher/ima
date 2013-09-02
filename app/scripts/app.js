@@ -1,6 +1,6 @@
 'use strict';
 
-var ima = angular.module('ima', ['ima.services']);
+var ima = angular.module('ima', []);
 
 ima.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -23,6 +23,8 @@ ima.config(['$routeProvider', function($routeProvider) {
   }]);
 
 
+/*
+
 app.factory ('Page', function () {
     var title = 'defualt';
     return {
@@ -35,3 +37,6 @@ app.factory ('Page', function () {
 function HeaderCtrl ($scope, Page) {
     $scope.Page = Page;
 }
+
+
+*/
