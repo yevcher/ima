@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="ima">
-  <head ng-controller='MainCtrl'>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -14,7 +14,8 @@
     <link href="styles/justified-nav.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">	
 	
-    <title ng-bind="title.page"></title>
+<!--    <title ng-bind="title.page"></title>  -->
+<imapagetitle></imapagetitle>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,6 +47,10 @@
 
       </div>
 
+<!--    <div class="container">
+    <imapagetitle></imapagetitle>
+    </div>  -->
+
 	<div class="container" ng-view></div> 
 	
 	<div class="container">
@@ -72,6 +77,8 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/services/services.js"></script>
+    <script src="scripts/directives/directives.js"></script>
+
     <!-- endbuild -->
 	
   </body>
