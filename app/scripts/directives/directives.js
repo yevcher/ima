@@ -3,6 +3,9 @@
 var directives = angular.module('ima.directives', ['ima.services']);
 
 
+/*
+
+
 directives.directive('imapagetitle', ['$location', 'PageTitles', function ($location, PageTitles) {
     return {
 	restrict: 'E',
@@ -11,3 +14,6 @@ directives.directive('imapagetitle', ['$location', 'PageTitles', function ($loca
 	replace: true
     };
 }]);
+
+
+*/

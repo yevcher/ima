@@ -7,7 +7,7 @@ directives.directive('imapagetitle', ['$location', 'PageTitles', function ($loca
     return {
 	restrict: 'E',
 //	template: '<title>' + PageTitles[$location.path()] + '</title>',
-        template: '<title>' + PageTitles["/2"] + '</title>',
+        template: '<title>' + PageTitles[$location.path()] + '</title>',
 	replace: true
     };
 }]);

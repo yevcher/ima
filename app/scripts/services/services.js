@@ -2,6 +2,7 @@
 
 var services = angular.module('ima.services', []);
 
+/*
 
 services.factory('PageTitles', function () {
     var PageTitles = {};
@@ -10,6 +11,8 @@ services.factory('PageTitles', function () {
     PageTitles['/2'] = 'Page Two - Yes!';
     return PageTitles;
 });
+
+*/
 
 //
 //services.factory('Page', function() {

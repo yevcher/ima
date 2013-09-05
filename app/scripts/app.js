@@ -5,14 +5,17 @@ var ima = angular.module('ima', ['ima.services', 'ima.directives']);
 ima.config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
+        title: 'Main Page',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .when('/1', {
+        title: 'Page One',
         templateUrl: 'views/1.html',
         controller: 'MainCtrl'
       })
       .when('/2', {
+        title: 'Page Two',
         templateUrl: 'views/2.html',
         controller: 'MainCtrl'
       })
@@ -21,6 +24,14 @@ ima.config(['$routeProvider', function($routeProvider) {
         templateUrl: '404.html',
       });
   }]);
+
+ima.run(['$rootScope', function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute){
+	$rootScope.title = currentRoute.title;
+    });
+}]);
+
+
 
 
 /*
