@@ -37,8 +37,8 @@ ima.config(['$routeProvider', function($routeProvider) {
 ima.run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute){
 	$rootScope.title = currentRoute.title;
-//	$rootScope.sect1 = currentRoute.sec1;
-//	$rootScope.sect2 = currentRoute.sec2;
-//	$rootScope.sect3 = currentRoute.sec3;
+	$rootScope.sect1 = currentRoute.sec1;
+	$rootScope.sect2 = currentRoute.sec2;
+	$rootScope.sect3 = currentRoute.sec3;
     });
 }]);

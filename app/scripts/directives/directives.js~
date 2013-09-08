@@ -10,4 +10,4 @@ directives.directive('sectionInsert', function (templ) {
 	template: templ,
 	replace: true
     };
-}]);
+});
