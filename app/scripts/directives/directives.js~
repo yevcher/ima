@@ -1,13 +1,13 @@
 'use strict';
 
+
 var directives = angular.module('ima.directives', ['ima.services']);
 
 
-directives.directive('imapagetitle', ['$location', 'PageTitles', function ($location, PageTitles) {
+directives.directive('sectionInsert', function (templ) {
     return {
 	restrict: 'E',
-//	template: '<title>' + PageTitles[$location.path()] + '</title>',
-        template: '<title>' + PageTitles[$location.path()] + '</title>',
+	template: templ,
 	replace: true
     };
 }]);

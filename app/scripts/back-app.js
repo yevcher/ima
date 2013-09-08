@@ -7,26 +7,17 @@ ima.config(['$routeProvider', function($routeProvider) {
       .when('/', {
         title: 'Main Page',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        sec1: 'page01.html',
-	sec2: 'page02.html',
-	sec3: 'page03.html'
+        controller: 'MainCtrl'
       })
       .when('/1', {
         title: 'Page One',
         templateUrl: 'views/1.html',
-        controller: 'MainCtrl',
-        sec1: 'page11.html',
-        sec2: 'page12.html',
-	sec3: 'page13.html'
+        controller: 'MainCtrl'
       })
       .when('/2', {
         title: 'Page Two',
         templateUrl: 'views/2.html',
-        controller: 'MainCtrl',
-        sec1: 'page21.html',
-        sec2: 'page22.html',
-	sec3: 'page23.html'
+        controller: 'MainCtrl'
       })
       .otherwise({
 //        redirectTo: '/'
@@ -37,8 +28,26 @@ ima.config(['$routeProvider', function($routeProvider) {
 ima.run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute){
 	$rootScope.title = currentRoute.title;
-//	$rootScope.sect1 = currentRoute.sec1;
-//	$rootScope.sect2 = currentRoute.sec2;
-//	$rootScope.sect3 = currentRoute.sec3;
     });
 }]);
+
+
+
+
+/*
+
+app.factory ('Page', function () {
+    var title = 'defualt';
+    return {
+	title: function() {return title;},
+	setTitle: function(newTitle) {title = newTitle;}
+    };
+});
+
+
+function HeaderCtrl ($scope, Page) {
+    $scope.Page = Page;
+}
+
+
+*/
