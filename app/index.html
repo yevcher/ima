@@ -6,6 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+<!--    <script src="scripts/vendor/angular.js"></script>  -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="scripts/vendor/angular-ui-router.min.js"></script>
+	
+
+
+
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
@@ -17,7 +24,7 @@
 <!--    <title ng-bind="title.page"></title>  -->
 <!-- <imapagetitle></imapagetitle>  -->
 
-    <title ng-bind="$root.title">ima</title>
+<!--    <title ng-bind="$root.title">ima</title>   -->
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,37 +36,33 @@
 
   <body>
   
+<!--	<div>------------------------------------------------</div>   -->
+	<div ui-view></div>
+<!--   	<div>------------------------------------------------</div>  -->
+	<br>
+	<br>
+	<br>
+
 	<div>------------------------------------------------</div>
-	<div sectioninsert($root.sect1)></div>
-	
+<!--	<div ui-view="ViewB"></div>
 	<div>------------------------------------------------</div>
 	<br>
 	<br>
 	<br>
 
 	<div>------------------------------------------------</div>
-	<div sectioninsert($root.sect2)></div>
+	<div ui-view="ViewC"></div>
 	<div>------------------------------------------------</div>
 	<br>
 	<br>
-	<br>
-	
-	<div>------------------------------------------------</div>
-	<div sectioninsert($root.sect3)></div>
-	<div>------------------------------------------------</div>
-	<br>
-	<br>
-	<br>
+	<br>   -->
 
-	<div ng-view></div>
+<!---	<div ng-view></div>    -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-<!--    <script src="scripts/vendor/angular.js"></script>  -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>

@@ -4,7 +4,7 @@
 var directives = angular.module('ima.directives', ['ima.services']);
 
 
-directives.directive('sectionInsert', function (templ) {
+directives.directive('sectioninsert', function (templ) {
     return {
 	restrict: 'E',
 	template: templ,

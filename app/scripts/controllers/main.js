@@ -13,12 +13,15 @@
 
 //}]);
 
+/*
 
 ima.controller ('MainCtrl', function ($scope) {
     $scope.greeting = {text: 'Hello'};
     $scope.title = {page: 'MyPage'};
 
 });
+
+*/
 
 /*
 

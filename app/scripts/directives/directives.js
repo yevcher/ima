@@ -1,3 +1,5 @@
+/*
+
 'use strict';
 
 
@@ -10,4 +12,4 @@ directives.directive('sectioninsert', function (templ) {
 	template: templ,
 	replace: true
     };
-});
+});   */

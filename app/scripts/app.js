@@ -1,7 +1,71 @@
-'use strict';
+/* 'use strict';  */
 
-var ima = angular.module('ima', ['ima.services', 'ima.directives']);
+var ima = angular.module('ima', ['ui.router']);
 
+ima.config([$stateProvider, $urlRouterProvider, function($stateProvider, $urlRouterProvider){
+
+        $urlRouterProvider.otherwise({
+            templateUrl: '404.html'
+	});
+
+
+	$stateProvider
+		.state('index', {
+			url: "",
+   		        template: "<p>Hello, World! 0</p>"
+
+/*
+//	                controller: 'MainCtrl',
+			views: {
+				"viewA": {
+//					templateUrl: "views/page01.html"
+				    template: "<p>Hello, World!</p>"
+				},
+				'viewB': {
+					templateUrl: 'views/page02.html'
+				},
+				"viewC": {
+					templateUrl: "views/page03.html"
+				}
+			}   */
+		})
+		.state('/1', {
+			url: "/1",
+   		        template: "<p>Hello, World! 1</p>"
+
+//			controller: 'MainCtrl',
+/*			views: {
+				"viewA": {
+					templateUrl: 'views/page11.html'
+				},
+				"viewB": {
+					templateUrl: "page12.html"
+				},
+				'viewC': {
+					templateUrl: '/views/page13.html'
+				}				
+			}   */
+		})
+		.state('/2', {
+			url: "/2",
+   		        template: "<p>Hello, World! 2</p>"
+//			controller: 'MainCtrl',
+/*			views: {
+				"viewA": {
+					templateUrl: "page21.html"
+				},
+				"viewB": {
+					templateUrl: "page22.html"
+				},
+				"viewC": {
+					templateUrl: "page23.html"
+				}				
+			}  */
+		})
+}])
+
+
+/*
 ima.config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -34,6 +98,8 @@ ima.config(['$routeProvider', function($routeProvider) {
       });
   }]);
 
+  
+  
 ima.run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute){
 	$rootScope.title = currentRoute.title;
@@ -42,3 +108,5 @@ ima.run(['$rootScope', function($rootScope) {
 	$rootScope.sect3 = currentRoute.sec3;
     });
 }]);
+
+*/
