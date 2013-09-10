@@ -4,14 +4,18 @@ var ima = angular.module('ima', ['ui.router']);
 
 ima.config([$stateProvider, $urlRouterProvider, function($stateProvider, $urlRouterProvider){
 
+
+        log.console("Hi there");
+
+
         $urlRouterProvider.otherwise({
             templateUrl: '404.html'
 	});
 
 
 	$stateProvider
-		.state('index', {
-			url: "",
+		.state('/', {
+			url: "/",
    		        template: "<p>Hello, World! 0</p>"
 
 /*
@@ -29,8 +33,8 @@ ima.config([$stateProvider, $urlRouterProvider, function($stateProvider, $urlRou
 				}
 			}   */
 		})
-		.state('/1', {
-			url: "/1",
+		.state('/contacts', {
+			url: "/contacts",
    		        template: "<p>Hello, World! 1</p>"
 
 //			controller: 'MainCtrl',
@@ -46,8 +50,8 @@ ima.config([$stateProvider, $urlRouterProvider, function($stateProvider, $urlRou
 				}				
 			}   */
 		})
-		.state('/2', {
-			url: "/2",
+		.state('/route1', {
+			url: "/route1",
    		        template: "<p>Hello, World! 2</p>"
 //			controller: 'MainCtrl',
 /*			views: {

@@ -1,0 +1,21 @@
+{
+  "name": "ima",
+  "main": "ima.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yevcher/ima",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.0",
+    "angular-ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "angular": "bower_components/angular/angular.js"
+
+  }
+}
