@@ -6,66 +6,41 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-<!--    <script src="scripts/vendor/angular.js"></script>  -->
+    <!--    <script src="scripts/vendor/angular.js"></script>  -->
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="scripts/vendor/angular-ui-router.min.js"></script> 
-	
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
+<!--    <script src="scripts/vendor/angular-ui-router.min.js"></script>    -->
+    <script src="scripts/app.js"></script>	
 
 
 
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>			
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>			
     <!-- Custom styles for this template -->
     <link href="styles/justified-nav.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">	
 
-<!--    <title ng-bind="title.page"></title>  -->
-<!-- <imapagetitle></imapagetitle>  -->
 
-<!--    <title ng-bind="$root.title">ima</title>   -->
+    <title ng-bind="$root.title">ima</title> 
 
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-  
-<!--	<div>------------------------------------------------</div>   -->
 	<div ui-view></div>
-<!--   	<div>------------------------------------------------</div>  -->
-	<br>
-	<br>
-	<br>
-
 	<div>------------------------------------------------</div>
-<!--	<div ui-view="ViewB"></div>
-	<div>------------------------------------------------</div>
-	<br>
-	<br>
-	<br>
 
-	<div>------------------------------------------------</div>
-	<div ui-view="ViewC"></div>
-	<div>------------------------------------------------</div>
-	<br>
-	<br>
-	<br>   -->
-
-<!---	<div ng-view></div>    -->
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+	<pre>
+	  $state = {{$state.current.name}}
+	  $stateParams = {{stateParams}}
+	  $state full url = {{$state.$current.url.source}}
+	</pre>
 
 
     <!-- build:js scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
+
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/services/services.js"></script>
     <script src="scripts/directives/directives.js"></script>
