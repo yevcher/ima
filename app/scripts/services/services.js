@@ -1,6 +1,10 @@
+/*
 'use strict';
 
 var services = angular.module('ima.services', []);
+
+
+*/
 
 /*
 

@@ -8,9 +8,11 @@
 
     <!--    <script src="scripts/vendor/angular.js"></script>  -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
-<!--    <script src="scripts/vendor/angular-ui-router.min.js"></script>    -->
+<!--    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>   -->
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<!--    <script src="scripts/vendor/angular-ui-router.min.js"></script>  -->
     <script src="scripts/app.js"></script>	
 
 
@@ -24,7 +26,7 @@
     <link href="styles/main.css" rel="stylesheet">	
 
 
-    <title ng-bind="$root.title">ima</title> 
+<!--    <title ng-bind="$root.title">ima</title>   -->
 
   </head>
 
@@ -32,7 +34,16 @@
 	<div ui-view></div>
 	<div>------------------------------------------------</div>
 
+	<div ng-controller='HelloController'>
+	  <input ng-model='greeting2.text'>
+	  <p> {{greeting2}}, World</p>
+	</div>
+
 	<pre>
+	  $root = {{$root}}
+	  $rootScope = {{rootScope}}
+	  $scope = {{$scope}}
+	  $state = {{$state}}
 	  $state = {{$state.current.name}}
 	  $stateParams = {{stateParams}}
 	  $state full url = {{$state.$current.url.source}}

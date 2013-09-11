@@ -1,6 +1,6 @@
 'use strict';
 
-var ima = angular.module('ima', ['ima.services', 'ima.directives']);
+var ima = angular.module('ima', []);
 
 ima.config(['$routeProvider', function($routeProvider) {
     $routeProvider
