@@ -6,57 +6,95 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!--    <script src="scripts/vendor/angular.js"></script>  -->
-
-<!--    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>   -->
-
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<!--    <script src="scripts/vendor/angular-ui-router.min.js"></script>  -->
-    <script src="scripts/app.js"></script>	
-
-
-
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>			
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>			
     <!-- Custom styles for this template -->
     <link href="styles/justified-nav.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">	
+	
+<!--    <title ng-bind="title.page"></title>  -->
+<!-- <imapagetitle></imapagetitle>  -->
+
+    <title ng-bind="$root.title">ima</title>
 
 
-<!--    <title ng-bind="$root.title">ima</title>   -->
-
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-	<div ui-view></div>
-	<div>------------------------------------------------</div>
 
-	<div ng-controller='HelloController'>
-	  <input ng-model='greeting2.text'>
-	  <p> {{greeting2}}, World</p>
-	</div>
+    <div class="container">
 
-	<pre>
-	  $root = {{$root}}
-	  $rootScope = {{rootScope}}
-	  $scope = {{$scope}}
-	  $state = {{$state}}
-	  $state = {{$state.current.name}}
-	  $stateParams = {{stateParams}}
-	  $state full url = {{$state.$current.url.source}}
-	</pre>
+      <div class="masthead">
+        <h3 class="text-muted">Project name</h3>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Downloads</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+	 </div>
 
+    <div class="container" ng-controller='MainCtrl'>
+      <p ng-bind="greeting.text"></p>
+
+      </div>
+
+    <div class="container" ng-controller='HelloController'>
+      <input ng-model='greeting2.text'>
+      <p>{{greeting2.text}}, World</p>
+    </div>
+
+    <pre>
+      $root = {{$root}}
+      $rootScope = {{rootScope}}
+      $scope = {{scope}}
+    </pre>
+
+
+
+<!--    <div class="container">
+    <imapagetitle></imapagetitle>
+    </div>  -->
+
+	<div class="container" ng-view></div> 
+	
+	<div class="container">
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	
+
+
+<!--    <script src="scripts/vendor/angular.js"></script>  -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
     <!-- build:js scripts/scripts.js -->
-
+    <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/services/services.js"></script>
     <script src="scripts/directives/directives.js"></script>
 
     <!-- endbuild -->
-
+	
   </body>
 </html>
