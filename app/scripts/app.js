@@ -3,17 +3,18 @@
 
 angular
    .module('ima', ['ui.router', 'homeModule', 'pageModule01', 'errorModule'])
-//   .controller('appCtrl', function ($rootScope) {
-//       $rootScope.greeting3 = {text: "Hey you"};
-//   })
+   .controller('helloCtrl', [$scope, function ($scope) {
+       $scope.greeting3 = {text: "Hey you"};
+   }])
    .config([$stateProvider, $urlRouterProvider, function($stateProvider, $urlRouterProvider){
        $urlRouterProvider.otherwise('/404'); // 404 for bad URLs
        $urlRouterProvider.when('', '/'); //Redirect
     }])
-   .run([$rootScope, $state, function($rootScope, $state) {
+    .run([$rootScope, $state, $stateParams, function($rootScope, $state, $stateParams) {
        $rootScope.$state = $state;
-       $rootScope.$on('$stateChangeStart', function(evt, toState, toParams, fromState, fromParams) {
-	   $state.transitionTo(toState);
+       $rootScope.$stateParams = $stateParams;
+       $rootScope.$on('$stateChangeSuccess', function(evt, toState, toParams, fromState, fromParams) {
+	   $state.go(toState);
        }
     }]);
 
