@@ -2,8 +2,6 @@
 
 var ima = angular.module('ima', [
     'ui.state',
-//    'ima.services',
-//    'ima.directives',
     'homeModule',
     'pageModule01',
     'errorModule'
@@ -26,7 +24,7 @@ ima.run([$rootScope, $state, function($rootScope, $state) {
 
 //Pages
 
-angular.module('homeModule', ['ui.state'])
+angular.module('homeModule', ['ui.router'])
     .config([$stateProvider, function($stateProvider) {
 	$stateProvider
 	    .state('home', {
@@ -35,7 +33,7 @@ angular.module('homeModule', ['ui.state'])
 	    })
     }]);
 
-angular.module('pageModule01', ['ui.state'])
+angular.module('pageModule01', ['ui.router'])
     .config([$stateProvider, function($stateProvider) {
 	$stateProvider
 	    .state('/1', {
@@ -47,7 +45,7 @@ angular.module('pageModule01', ['ui.state'])
 
 
 //Error Module
-angular.module('errorModule', ['ui.state'])
+angular.module('errorModule', ['ui.router'])
     .config([$stateProvider, function($stateProvider) {
 	$stateProvider
 	    .state('error', {

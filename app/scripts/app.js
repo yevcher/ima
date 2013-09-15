@@ -1,53 +1,57 @@
 'use strict';
 
-var ima = angular.module('ima', []);
 
-ima.config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-      .when('/', {
-        title: 'Main Page',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/1', {
-        title: 'Page One',
-        templateUrl: 'views/1.html',
-        controller: 'MainCtrl'
-      })
-      .when('/2', {
-        title: 'Page Two',
-        templateUrl: 'views/2.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-//        redirectTo: '/'
-        templateUrl: '404.html',
-      });
-  }]);
-
-ima.run(['$rootScope', function($rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute){
-	$rootScope.title = currentRoute.title;
-    });
-}]);
+angular
+   .module('ima', ['ui.router', 'homeModule', 'pageModule01', 'errorModule'])
+//   .controller('appCtrl', function ($rootScope) {
+//       $rootScope.greeting3 = {text: "Hey you"};
+//   })
+   .config([$stateProvider, $urlRouterProvider, function($stateProvider, $urlRouterProvider){
+       $urlRouterProvider.otherwise('/404'); // 404 for bad URLs
+       $urlRouterProvider.when('', '/'); //Redirect
+    }])
+   .run([$rootScope, $state, function($rootScope, $state) {
+       $rootScope.$state = $state;
+       $rootScope.$on('$stateChangeStart', function(evt, toState, toParams, fromState, fromParams) {
+	   $state.transitionTo(toState);
+       }
+    }]);
 
 
+//Pages
+
+angular
+   .module('homeModule', ['ui.router'])
+   .config([$stateProvider, function($stateProvider) {
+	$stateProvider
+	    .state('home', {
+		url: '/',
+   		template: '<p>Hello, World! 0</p>',
+//		controller: 'MainCtrl'
+	    })
+    }]);
+
+angular
+   .module('pageModule01', ['ui.router'])
+   .config([$stateProvider, function($stateProvider) {
+	$stateProvider
+	    .state('/1', {
+		url: '/1',
+   		template: '<p>Hello, World! This is page 1</p>',
+//		controller: 'MainCtrl'
+	    })
+    }]);
 
 
-/*
-
-app.factory ('Page', function () {
-    var title = 'defualt';
-    return {
-	title: function() {return title;},
-	setTitle: function(newTitle) {title = newTitle;}
-    };
-});
-
-
-function HeaderCtrl ($scope, Page) {
-    $scope.Page = Page;
-}
+//Error Module
+angular
+    .module('errorModule', ['ui.router'])
+    .config([$stateProvider, function($stateProvider) {
+	$stateProvider
+	    .state('error', {
+		url: '/404',
+   		templateURL: 'views/404.html'
+	    })
+    }]);
 
 
-*/

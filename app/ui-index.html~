@@ -6,12 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-<!--    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>  -->
-
-
-    <script src="scripts/vendor/angular.min.js"></script>
-    <script src="scripts/vendor/angular-ui-router.min.js"></script>
+<!--    <script src="../bower_components/angular/angular.js"></script>  -->
+<!--    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>   -->
+<!--    <script src="scripts/vendor/angular-ui-router.min.js"></script>  -->
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -19,9 +16,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>			
     <!-- Custom styles for this template -->
     <link href="styles/justified-nav.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
-
-    <base href="/app/"></base>
+    <link href="styles/main.css" rel="stylesheet">	
 
 
 <!--    <title ng-bind="$root.title">ima</title>   -->
@@ -50,7 +45,7 @@
 
     <!--    <script src="scripts/vendor/angular.js"></script>  -->
 
-<!--    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>  -->>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
 
 

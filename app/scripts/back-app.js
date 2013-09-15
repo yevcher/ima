@@ -21,7 +21,7 @@ ima.config(['$routeProvider', function($routeProvider) {
       })
       .otherwise({
 //        redirectTo: '/'
-        templateUrl: '404.html',
+        templateUrl: 'views/404.html',
       });
   }]);
 
