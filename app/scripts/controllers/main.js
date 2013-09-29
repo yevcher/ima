@@ -1,12 +1,4 @@
-ima.controller ('MainCtrl', function ($scope) {
-    $scope.greeting = {text: 'Hello'};
-//    $scope.title = {page: 'MyPage'};
-
+app.controller('MainCtrl', function($scope, $rootScope) {
+  $scope.name = 'World';
+  $scope.items = allValues; 
 });
-
-
-
-ima.controller ('HelloController', function ($scope) {
-    $scope.greeting2 = {text: 'Hi there'};
-});
-

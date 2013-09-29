@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="masthead">
+    <h3 class="text-muted">Project name</h3>
+    <ul class="nav nav-justified">
+      <li ng-repeat = "item in items"
+          class="item"
+          ng-class = "{'active': item.name == $state.isActive}"          
+          ng-click = "$state.go(item.name)">           
+          <a>{{item.options.title}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<p>{{$state.hello}}</p>
+<p>allValues = {{$state.values}}</p>
+<br>
+<p>$state.event = {{$state.event}}</p>
+<p>$state.toState = {{$state.toState}}</p>
+<p>$state.toParams = {{$state.toParams}}</p>
+<p>$state.fromState = {{$state.fromState}}</p>
+<p>$state.fromParams = {{$state.fromParams}}</p>
+<p>$state.current = {{$state.current}}</p>
+<p>$state.isActive = {{$state.isActive}}</p>
