@@ -12,6 +12,9 @@ angular.module('allStates', ['ui.router'])
         },
         "viewB": {
           templateUrl: "views/home.html"
+        },
+        "viewC": {
+          templateUrl: "views/footer.html"
         }
       },
       title: "Home"
@@ -27,6 +30,9 @@ angular.module('allStates', ['ui.router'])
         },
         "viewB": {
           templateUrl: "views/service.html"
+        },
+        "viewC": {
+          templateUrl: "views/footer.html"
         }
       },
       title: "Service"
@@ -42,6 +48,9 @@ angular.module('allStates', ['ui.router'])
         },
         "viewB": {
           templateUrl: "views/projects.html"
+        },
+        "viewC": {
+          templateUrl: "views/footer.html"
         }
       },
       title: "Projects"
@@ -57,6 +66,9 @@ angular.module('allStates', ['ui.router'])
         },
         "viewB": {
           templateUrl: "views/blog.html"
+        },
+        "viewC": {
+          templateUrl: "views/footer.html"
         }
       },
       title: "Blog"
@@ -72,6 +84,9 @@ angular.module('allStates', ['ui.router'])
         },
         "viewB": {
           templateUrl: "views/contacts.html"
+        },
+        "viewC": {
+          templateUrl: "views/footer.html"
         }
       },
       title: "Contacts"

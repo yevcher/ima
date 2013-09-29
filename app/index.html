@@ -30,6 +30,9 @@
       <div class="span12">
         <div class="well" ui-view="viewB"></div>        
       </div>
+      <div class="span12">
+        <div class="well" ui-view="viewC"></div>        
+      </div>
     </div>
 
     <p>Hello {{name}}!</p>
@@ -40,6 +43,16 @@
       $stateParams = {{$stateParams}}
       $state.current.name = {{$state.current.name}}
 
+    </pre>
+
+    <pre>
+      allValues ={{$state.values}}
+      $state.event = {{$state.event}}
+      $state.toState = {{$state.toState}}
+      $state.toParams = {{$state.toParams}}
+      $state.fromState = {{$state.fromState}}
+      $state.fromParams = {{$state.fromParams}}
+      $state.isActive = {{$state.isActive}}
     </pre>
  
     <!--    VENDOR SCRIPTS    -->

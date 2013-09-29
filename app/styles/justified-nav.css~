@@ -32,7 +32,7 @@ body {
 /*  color: #777; */
   color: #fff;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
 /*  border-bottom: 1px solid #d5d5d5;
   background-color: #e5e5e5; /* Old browsers 
